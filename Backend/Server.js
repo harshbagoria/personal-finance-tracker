@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./Config/db.js";
 import v1Routes from "./Routes/V1/index.js";
-
+import TestRoute from "./Routes/V1/TestRoute.js";
 dotenv.config();
 
 
@@ -16,6 +16,8 @@ app.get("/", (req, res) => {
   res.send("Server is running...");
 });
 
+
+app.use("/api/test", TestRoute);
 app.use("/api/v1", v1Routes);
 
 const PORT = process.env.PORT || 5002;

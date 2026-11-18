@@ -20,7 +20,7 @@ function AddExpenseModal({ open, onClose, onAddExpense }) {
       date: values.date.format("YYYY-MM-DD"),
       type: "expense"
     };
-
+   
     onAddExpense(expenseData);
 
     form.resetFields();

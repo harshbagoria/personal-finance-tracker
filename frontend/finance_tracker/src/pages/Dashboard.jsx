@@ -11,7 +11,7 @@ const Dashboard = () => {
     const [showisExpenseModel, setshowisExpenseModel] = useState(false);
 
 
-
+ 
     const showIncomeModel = () => {
         setisshowIncomeModel(true);
 
@@ -47,6 +47,7 @@ const Dashboard = () => {
                 onAddIncome={(incomeData) => {
                     console.log('Income submitted:', incomeData);
                 }}
+               
             />
             
 
