@@ -39,3 +39,23 @@ export const addTransaction = async (req, res) => {
     });
   }
 };
+
+export const getTransactions = async (req, res) => {
+    try {
+        const userId = req.user.userId;
+        const transactions = await Transaction.find({ userId })
+      .sort({ date: -1 });
+
+    return res.status(200).json({
+      success: true,
+      count: transactions.length,
+      transactions
+    });
+
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message
+    });
+  }
+    }

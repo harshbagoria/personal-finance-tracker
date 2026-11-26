@@ -156,7 +156,7 @@ function AddIncomeModal({ open, onClose, onAddIncome }) {
               Cancel
             </Button>
 
-            <Button type="primary" htmlType="submit">
+            <Button onClick={onAddIncome} type="primary" htmlType="submit">
               Add Income
             </Button>
 
